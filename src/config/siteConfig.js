@@ -1,0 +1,1 @@
+import C from './site-content.json'; export default C; export const t = (o, l = 'tr') => !o ? '' : typeof o === 'string' ? o : (o[l] || o.tr || o.en || ''); export const PLACEHOLDER = '/placeholder.svg';

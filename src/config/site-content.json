@@ -1,0 +1,15 @@
+{
+  "_schema": "3.0",
+  "_style": "Editorial Monochrome",
+  "business": { "name": "Kafe Adı", "shortName": "Kafe", "tagline": "Coffee & Kitchen", "neighborhood": "Semt, İlçe", "address": "BELİRSİZ", "phone": null, "rating": 4.8, "ratingPlatform": "Google" },
+  "hours": { "openHour": 8, "closeHour": 21, "daysLabel": {"tr":"Her gün","en":"Every day"}, "displayText": {"tr":"Her gün 08:00 — 21:00","en":"Daily 08:00 — 21:00"} },
+  "theme": { "colors": { "ink": "#0A0A0A", "accent": "#E0463A", "bg": "#FFFFFF" }, "fonts": { "display": "DM Serif Display", "sans": "Space Grotesk" } },
+  "hero": { "tagline": {"tr":"İyi kahve,","en":"Good coffee,"}, "tagline2": {"tr":"iyi sohbet.","en":"good conversation."}, "desc": {"tr":"Üçüncü nesil kahve, ev yapımı tatlılar, samimi ortam.","en":"Third-wave coffee, homemade pastries, intimate setting."}, "cta": {"tr":"Menü","en":"Menu"}, "cta2": {"tr":"Konum","en":"Location"} },
+  "about": { "heading": {"tr":"Biz Kimiz","en":"Who We Are"}, "body": {"tr":"2018'den beri mahallenin buluşma noktası. Her çekirdeği tanıyor, her fincanı özenle hazırlıyoruz.","en":"The neighborhood meeting point since 2018. We know every bean, craft every cup with care."}, "stats": [{"n":"500+","label":{"tr":"Mutlu misafir/gün","en":"Happy guests/day"}},{"n":"12","label":{"tr":"Özel blend","en":"Signature blends"}}] },
+  "menuItems": { "coffee": [{"id":"e1","name":{"tr":"Espresso","en":"Espresso"},"desc":{"tr":"Double shot","en":"Double shot"},"price":"₺45"},{"id":"e2","name":{"tr":"Filtre","en":"Pour Over"},"desc":{"tr":"V60, tek köken","en":"V60, single origin"},"price":"₺60"},{"id":"e3","name":{"tr":"Cold Brew","en":"Cold Brew"},"desc":{"tr":"24 saat demlenmiş","en":"24h steeped"},"price":"₺70"}], "food": [{"id":"f1","name":{"tr":"Avokado Tost","en":"Avocado Toast"},"desc":{"tr":"Ekşi maya","en":"Sourdough"},"price":"₺95"},{"id":"f2","name":{"tr":"Granola Bowl","en":"Granola Bowl"},"desc":{"tr":"Mevsim meyveli","en":"Seasonal fruit"},"price":"₺85"},{"id":"f3","name":{"tr":"Tahinli Brownie","en":"Tahini Brownie"},"desc":{"tr":"Ev yapımı","en":"House-made"},"price":"₺65"}], "drinks": [{"id":"d1","name":{"tr":"Matcha Latte","en":"Matcha Latte"},"desc":{"tr":"Japon tozu","en":"Japanese powder"},"price":"₺75"},{"id":"d2","name":{"tr":"Kombucha","en":"Kombucha"},"desc":{"tr":"Fermente","en":"Fermented"},"price":"₺65"}] },
+  "gallery": { "heading": {"tr":"Mekân","en":"The Space"}, "images": [{"src":"/placeholder.svg","alt":"Interior 1"},{"src":"/placeholder.svg","alt":"Coffee bar"},{"src":"/placeholder.svg","alt":"Garden"},{"src":"/placeholder.svg","alt":"Detail"}] },
+  "testimonials": { "heading": {"tr":"Ne Dediler","en":"What They Say"}, "reviews": [{"text":"Şehrin en iyi filtre kahvesi.","author":"Ece D.","rating":5},{"text":"Pazar sabahlarının vazgeçilmezi.","author":"Can B.","rating":5}] },
+  "contact": { "heading": {"tr":"Buradayız","en":"Find Us"}, "googleMapsEmbedUrl":"", "googleMapsUrl":"" },
+  "social": { "instagram":"" },
+  "languages": ["tr","en"], "defaultLanguage": "tr"
+}
