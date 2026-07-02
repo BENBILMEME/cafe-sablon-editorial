@@ -1,1 +1,1 @@
-import C from './site-content.json'; export default C; export const t = (o, l = 'tr') => !o ? '' : typeof o === 'string' ? o : (o[l] || o.tr || o.en || ''); export const PLACEHOLDER = '/placeholder.svg';
+import C from './site-content.json'; export default C; export const t = (o, l = 'tr') => { if (!o) { console.warn('[Config] t() empty'); return ''; } if (typeof o === 'string') return o; const v = o[l] || o.tr || o.en; if (!v) console.warn('[Config] Missing:', o, l); return v || ''; }; export const PLACEHOLDER = '/placeholder.svg';
