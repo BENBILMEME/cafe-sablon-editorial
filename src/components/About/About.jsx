@@ -31,8 +31,8 @@ export default function About() {
           {/* Sağ */}
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
             className="grid grid-cols-2 gap-3">
-            <div className="aspect-square bg-ink-80 overflow-hidden"><img src={PLACEHOLDER} alt="About 1" className="w-full h-full object-cover opacity-70 grayscale" /></div>
-            <div className="aspect-square bg-ink-80 overflow-hidden mt-8"><img src={PLACEHOLDER} alt="About 2" className="w-full h-full object-cover opacity-70 grayscale" /></div>
+            <div className="aspect-square bg-ink-80 overflow-hidden"><img src={PLACEHOLDER} alt={C.business.name + ' — ' + t({tr:'Mekan',en:'Interior'},lang)} className="w-full h-full object-cover opacity-70 grayscale" /></div>
+            <div className="aspect-square bg-ink-80 overflow-hidden mt-8"><img src={PLACEHOLDER} alt={C.business.name + ' — ' + t({tr:'Detay',en:'Detail'},lang)} className="w-full h-full object-cover opacity-70 grayscale" /></div>
           </motion.div>
         </div>
       </Container>

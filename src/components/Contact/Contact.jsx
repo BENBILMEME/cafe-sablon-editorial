@@ -38,7 +38,7 @@ export default function Contact() {
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
             className="aspect-square bg-ink-10 flex items-center justify-center overflow-hidden">
             {C.contact.googleMapsEmbedUrl ? (
-              <iframe src={C.contact.googleMapsEmbedUrl} width="100%" height="100%" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+              <iframe title={`${C.business.name} — Google Maps`} src={C.contact.googleMapsEmbedUrl} width="100%" height="100%" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
             ) : (
               <span className="font-sans text-sm text-ink-30">Google Maps — site-content.json'dan güncelleyin</span>
             )}
