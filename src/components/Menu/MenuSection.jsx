@@ -4,7 +4,7 @@ import C, { t } from '../../config/siteConfig';
 import { Section, Container, Label, Headline, fadeUp } from '../../lib/animations';
 
 const CATS = ['coffee','food','drinks'];
-const ICONS = { coffee: '01', food: '02', drinks: '03' };
+const CAT_LABELS = { coffee: {tr:'Kahve',en:'Coffee'}, food: {tr:'Yiyecek',en:'Food'}, drinks: {tr:'İçecek',en:'Drinks'} };
 
 export default function MenuSection() {
   const loc = useLocation();
@@ -18,26 +18,49 @@ export default function MenuSection() {
           <Headline className="mb-16">{t({tr:'Ne İçilir, Ne Yenir',en:'What to Drink & Eat'},lang)}</Headline>
         </motion.div>
 
-        <div className="space-y-20">
+        <div className="space-y-24">
           {CATS.map((cat, ci) => {
             const items = C.menuItems[cat] || [];
             return (
               <motion.div key={cat} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                <div className="flex items-baseline gap-4 mb-8">
-                  <span className="font-display text-4xl text-ink/10 tabular-nums">{ICONS[cat]}</span>
-                  <h3 className="font-display text-2xl text-ink">{t({tr:{coffee:'Kahve',food:'Yiyecek',drinks:'İçecek'}[cat],en:{coffee:'Coffee',food:'Food',drinks:'Drinks'}[cat]},lang)}</h3>
-                  <span className="flex-1 h-px bg-ink/10 mt-3" />
+                {/* Kategori başlığı */}
+                <div className="flex items-baseline gap-4 mb-10">
+                  <span className="font-display text-5xl text-ink/10 tabular-nums">{`0${ci+1}`}</span>
+                  <h3 className="font-display text-3xl text-ink">{t(CAT_LABELS[cat], lang)}</h3>
+                  <span className="flex-1 h-px bg-ink/10 mt-4" />
                 </div>
 
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-1">
-                  {items.map(item => (
-                    <div key={item.id} className="group flex justify-between items-start p-4 hover:bg-ink/[0.02] transition-colors">
-                      <div>
-                        <h4 className="font-display text-lg text-ink group-hover:text-accent transition-colors">{t(item.name,lang)}</h4>
-                        <p className="font-sans text-sm text-ink-50 mt-0.5">{t(item.desc,lang)}</p>
+                {/* Ürün grid */}
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {items.map((item, i) => (
+                    <motion.div
+                      key={item.id}
+                      initial={{ opacity: 0, y: 12 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.05 }}
+                      className="group card-lift border border-ink/5 rounded-none p-5"
+                    >
+                      {/* Üst: isim + fiyat */}
+                      <div className="flex justify-between items-start gap-3 mb-2">
+                        <h4 className="font-display text-lg text-ink group-hover:text-accent transition-colors duration-200">
+                          {t(item.name, lang)}
+                        </h4>
+                        <span className="font-sans text-sm font-semibold text-accent shrink-0 mt-0.5 tabular-nums">
+                          {item.price}
+                        </span>
                       </div>
-                      <span className="font-sans text-sm font-semibold text-ink-80 shrink-0 ml-3 mt-1">{item.price}</span>
-                    </div>
+
+                      {/* Alt: açıklama + noktalı çizgi */}
+                      <div className="flex items-end gap-2">
+                        <p className="font-sans text-sm text-ink-50 leading-relaxed line-clamp-2">
+                          {t(item.desc, lang)}
+                        </p>
+                      </div>
+
+                      {/* Hover çizgisi */}
+                      <div className="mt-4 h-px bg-ink/5 group-hover:bg-accent/30 transition-colors duration-300" />
+                    </motion.div>
                   ))}
                 </div>
               </motion.div>
